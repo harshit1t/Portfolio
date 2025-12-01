@@ -49,7 +49,7 @@ export default function Portfolio() {
       description:
         "Conversational chatbot that recommends songs based on user preferences using NLP techniques and machine learning algorithms.",
       tech: ["React.js", "IBM Tone Analyzer API", "Last.fm API", "Python", "Flask"],
-      github: "https://github.com/harshitaipro/chatbot-song-recommender",
+      github: "https://github.com/harshit1t/Song-recommendation-chatbot",
       features: ["Natural Language Processing", "Personalized Recommendations", "External API Integration"],
     },
     {
@@ -57,7 +57,7 @@ export default function Portfolio() {
       description:
         "Dynamic e-commerce platform with user authentication, product search, shopping cart, and secure payment gateway.",
       tech: ["MongoDB", "Express.js", "React", "Node.js", "Redux", "Bootstrap"],
-      github: "https://github.com/harshitaipro/fashion-store-webapp",
+      github: "https://github.com/harshit1t/Fashion-Store",
       features: ["User Authentication", "Payment Gateway", "Responsive Design", "Product Filtering"],
     },
     {
@@ -65,7 +65,7 @@ export default function Portfolio() {
       description:
         "Web-based platform to automate college administrative tasks with role-based access control for different user types.",
       tech: ["MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
-      github: "https://github.com/harshitaipro/college-admin-system",
+      github: "https://github.com/harshit1t/College-Administration-Management-System",
       features: ["Role-based Access", "Student Records", "Exam Scheduling", "Faculty Management"],
     },
   ]
@@ -177,9 +177,9 @@ export default function Portfolio() {
                 Harshit Tiwari
               </span>
             </h1>
-            <h2 className="text-xl md:text-2xl text-gray-300 mb-4">Full Stack Developer | MERN & Next.js Specialist</h2>
+            <h2 className="text-xl md:text-2xl text-gray-300 mb-4">SDE1 at abhiLoans | Full Stack Developer</h2>
             <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-              Building scalable, intelligent, and user-friendly web applications.
+              Building scalable, intelligent, and user-friendly web applications with expertise in MERN stack and Next.js.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -193,7 +193,7 @@ export default function Portfolio() {
               </Button>
               <div className="flex gap-4">
                 <Button variant="outline" size="lg" asChild>
-                  <a href="https://github.com/harshitaipro" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/harshit1t" target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
                     GitHub
                   </a>
@@ -233,15 +233,28 @@ export default function Portfolio() {
             <Dialog.Panel className="bg-gray-900 rounded-lg shadow-lg max-w-4xl w-full p-4">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg font-bold text-white">My Resume</h2>
-                <button
-                  onClick={() => setIsResumeOpen(false)}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <X size={24} />
-                </button>
+                <div className="flex items-center gap-3">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    asChild
+                    className="bg-transparent border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white"
+                  >
+                    <a href="/Harshit_Tiwari.pdf" download="Harshit_Tiwari_Resume.pdf">
+                      <Download className="mr-2 h-4 w-4" />
+                      Download
+                    </a>
+                  </Button>
+                  <button
+                    onClick={() => setIsResumeOpen(false)}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    <X size={24} />
+                  </button>
+                </div>
               </div>
               <iframe
-                src="/harshit-resume.pdf"
+                src="/Harshit_Tiwari.pdf"
                 className="w-full h-[500px] border-none"
                 title="Harshit Tiwari Resume"
               />
@@ -282,13 +295,14 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent className="text-gray-300">
                   <p className="mb-4">
-                    I'm a passionate Full Stack Developer with expertise in the MERN stack and Next.js. I love creating
-                    scalable web applications that solve real-world problems and provide exceptional user experiences.
+                    I'm a passionate Full Stack Developer currently working as SDE1 at abhiLoans, specializing in building 
+                    scalable fintech solutions. With expertise in the MERN stack and Next.js, I create web applications 
+                    that solve real-world problems and provide exceptional user experiences.
                   </p>
                   <p>
                     My journey in software development has been driven by curiosity and a desire to continuously learn
-                    and adapt to new technologies. I enjoy working on challenging projects that push the boundaries of
-                    what's possible.
+                    and adapt to new technologies. I thrive in collaborative environments and enjoy working on challenging 
+                    projects that push the boundaries of what's possible in web development.
                   </p>
                 </CardContent>
               </Card>
@@ -548,70 +562,140 @@ export default function Portfolio() {
             <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle className="flex items-center gap-2 text-white">
-                      <Briefcase className="h-5 w-5 text-blue-400" />
-                      Software Intern
-                    </CardTitle>
-                    <CardDescription className="text-lg text-purple-400 font-semibold">
-                      Banaras Locomotive Works
-                    </CardDescription>
-                    <p className="text-sm text-gray-400 mt-1">June 2023 - July 2023</p>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {/* Current Position */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm border-l-4 border-l-green-400">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
                     <div>
-                      <h4 className="font-semibold text-white mb-3">Key Achievements:</h4>
-                      <ul className="space-y-2 text-gray-300">
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Developed and optimized RESTful APIs, increasing data accessibility by 40%</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Reduced data retrieval time by 30% through API optimization</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Implemented DevOps practices, reducing deployment time by 50%</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-3">Responsibilities:</h4>
-                      <ul className="space-y-2 text-gray-300">
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Streamlined CI/CD processes and reduced manual intervention</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-pink-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Collaborated with networking and storage teams</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Optimized infrastructure for smooth deployments</span>
-                        </li>
-                      </ul>
+                      <div className="flex items-center gap-2">
+                        <CardTitle className="flex items-center gap-2 text-white">
+                          <Briefcase className="h-5 w-5 text-green-400" />
+                          Software Development Engineer I (SDE1)
+                        </CardTitle>
+                        <Badge className="bg-green-500/20 text-green-300 border-green-500">Current</Badge>
+                      </div>
+                      <CardDescription className="text-lg text-purple-400 font-semibold mt-1">
+                        abhiLoans
+                      </CardDescription>
+                      <p className="text-sm text-gray-400 mt-1">August 2024 - Present</p>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-semibold text-white mb-3">Key Achievements:</h4>
+                        <ul className="space-y-2 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Building and maintaining scalable fintech solutions</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Developing robust APIs and backend services</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Implementing best practices in software development</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white mb-3">Technologies:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary" className="bg-blue-900/30 text-blue-300 border-blue-700">
+                            MERN Stack
+                          </Badge>
+                          <Badge variant="secondary" className="bg-purple-900/30 text-purple-300 border-purple-700">
+                            Next.js
+                          </Badge>
+                          <Badge variant="secondary" className="bg-green-900/30 text-green-300 border-green-700">
+                            Node.js
+                          </Badge>
+                          <Badge variant="secondary" className="bg-orange-900/30 text-orange-300 border-orange-700">
+                            AWS
+                          </Badge>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Previous Experience */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <CardTitle className="flex items-center gap-2 text-white">
+                        <Briefcase className="h-5 w-5 text-blue-400" />
+                        Software Intern
+                      </CardTitle>
+                      <CardDescription className="text-lg text-purple-400 font-semibold">
+                        Banaras Locomotive Works
+                      </CardDescription>
+                      <p className="text-sm text-gray-400 mt-1">June 2023 - July 2023</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-semibold text-white mb-3">Key Achievements:</h4>
+                        <ul className="space-y-2 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Developed and optimized RESTful APIs, increasing data accessibility by 40%</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Reduced data retrieval time by 30% through API optimization</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Implemented DevOps practices, reducing deployment time by 50%</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white mb-3">Responsibilities:</h4>
+                        <ul className="space-y-2 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Streamlined CI/CD processes and reduced manual intervention</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-pink-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Collaborated with networking and storage teams</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>Optimized infrastructure for smooth deployments</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -726,7 +810,7 @@ export default function Portfolio() {
                   <div className="pt-6">
                     <div className="flex gap-4">
                       <Button variant="outline" size="sm" asChild>
-                        <a href="https://github.com/harshitaipro" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/harshit1t" target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4" />
                         </a>
                       </Button>
